@@ -21,6 +21,8 @@ Like this:
 
 ## Caveats
 
+### Mind the Quotes!
+
 If you have `"`(quotes) in your command args, you need to use single quotes to
 quote all args.
 
@@ -32,3 +34,17 @@ way is calling like this: `xbin jq -C '".[0] | keys"'`, or
 `xbin jq '-C ".[0] | keys"'`, then the double quotes will be kept in HTTP
 headers: `X-Args: -C ".[0] | keys"`, xbin.io will think your command as
 `jq -C ".[0] | keys"`, there are only two args, which is correct.
+
+### Where Is My Colors?!
+
+You may notice that if you run `jq` you will see colorize output, but when you
+run `xbin jq` the color is gone. That is because normally the cli tools will
+check if your current
+[`istty(3)`](https://man7.org/linux/man-pages/man3/isatty.3.html) (test whether
+your stdout refers to a terminal), if it is, then the cli will use colorize
+output, otherwise use monochrome output.
+
+But luckily that most of the cli provides the option that force the output to be
+colorized. Like `jq -C`, `grep --color=always`, `bat --color=always`, etc. So
+when you use `xbin` and want to see the colorized output, you should explicitly
+add the colorized options.
