@@ -1,6 +1,6 @@
 # xbin
 
-Your serverless toolkit.
+Your serverless cli toolkit.
 
 ## Install
 
