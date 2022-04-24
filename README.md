@@ -19,6 +19,10 @@ Like this:
 
 ![](./docimages/xbin-example.png)
 
+You can check the supported commands by `xbin -h` or `xbin --help`:
+
+![](./docimages/xbin-help.png)
+
 ## Caveats
 
 ### Mind the Quotes!
