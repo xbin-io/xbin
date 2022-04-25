@@ -5,7 +5,7 @@ Your serverless cli toolkit.
 ## Install
 
 Copy and paste the content from [`xbin.zsh`](./xbin.zsh)(Or
-[`xbin.sh`](./xbin.sh) if you use Bash) to you current shell.
+[`xbin.sh`](./xbin.sh) if you use Bash, [`xbin.fish`](./xbin.fish) if you use fish) to you current shell.
 
 (This will work only for the current shell, if you want `xbin` always work under
 your shell, you need to put the function (the content of the `xbin.zsh`) into
