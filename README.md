@@ -5,7 +5,8 @@ Your serverless cli toolkit.
 ## Install
 
 Copy and paste the content from [`xbin.zsh`](./xbin.zsh)(Or
-[`xbin.sh`](./xbin.sh) if you use Bash, [`xbin.fish`](./xbin.fish) if you use fish) to you current shell.
+[`xbin.sh`](./xbin.sh) if you use Bash, [`xbin.fish`](./xbin.fish) if you use
+fish) to you current shell.
 
 (This will work only for the current shell, if you want `xbin` always work under
 your shell, you need to put the function (the content of the `xbin.zsh`) into
@@ -22,6 +23,20 @@ Like this:
 You can check the supported commands by `xbin -h` or `xbin --help`:
 
 ![](./docimages/xbin-help.png)
+
+You can check if a command was supported or not, by this command:
+
+```shell
+$ xbin -h | xbin ansi2txt | xbin grep -i python
+python2.7  Python is an interpreted, interactive, object-oriented, open-source programming language.
+python3.10(python, python3)  Python is an interpreted, interactive, object-oriented, open-source programming language.
+python3.6  Python is an interpreted, interactive, object-oriented, open-source programming language.
+python3.8  Python is an interpreted, interactive, object-oriented, open-source programming language.
+python3.7  Python is an interpreted, interactive, object-oriented, open-source programming language.
+python3.9.12(python3.9)  Python is an interpreted, interactive, object-oriented, open-source programming language.
+```
+
+(`ansi2txt` is to remove the colors of output)
 
 ## Caveats
 
